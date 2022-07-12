@@ -1,0 +1,32 @@
+// Results for the tinyArray
+// insert 18.709 μs
+// append 39.875 μs
+
+// Results for the smallArray
+// insert 27.917 μs
+// append 78.458 μs
+
+// Results for the mediumArray
+// insert 153.208 μs
+// append 97.292 μs
+
+// Results for the largeArray
+// insert 6.566834 ms
+// append 404.084 μs
+
+// Results for the extraLargeArray
+// insert 770.475292 ms
+// append 2.173917 ms
+
+// Obviously, we can tell that insert does not scale very well.  
+// Comparing tinyArray -> extraLargeArray you can tell that it becomes 42,777 times larger
+// 
+// append, under the same situation is only 55 times bigger.
+//
+// Another note, you won't notice the slight microsecond difference for tinyArray and 
+// smallArray.
+
+// Extra credit - the unshift complexity or big O is O(n) but push is O(1) which means
+// that push is shorter over time.  unshift has to incremenet all of the elements
+// already present in the Array, but push just drops them all at the end, so in that
+// case, none of the Array element indexes have to change.
